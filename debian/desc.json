@@ -1,5 +1,5 @@
 {
-    "package_name": "examplegolangdebproject",
+    "package_name": "logservice",
     "version": "%VERSION%",
     "foreground": true
 }

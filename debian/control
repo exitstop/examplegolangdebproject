@@ -1,14 +1,14 @@
-Source: examplegolangdebproject
+Source: logservice
 Section: golang
 Priority: optional
 Maintainer: none <none@gmail.com>
 Build-Depends: debhelper-compat (= 12),
 Standards-Version: 4.5.0
-Homepage: https://github.com/exitstop/examplegolangdebproject
-XS-Go-Import-Path: github.com/exitstop/examplegolangdebproject
+Homepage: https://github.com/exitstop/logservice
+XS-Go-Import-Path: github.com/exitstop/logservice
 Rules-Requires-Root: no
 
-Package: examplegolangdebproject
+Package: logservice
 Architecture: any
 Depends: ${misc:Depends}
-Description: examplegolangdebproject
+Description: logservice

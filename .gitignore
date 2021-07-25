@@ -27,6 +27,12 @@
 #!storage/photos/default/test.ini
 
 # И в этих папках брать только эти форматы
+!*.install
+!*.logrotate
+!*.service
+!*.post
+!*.substvars
+!*.debhelper
 !*.ini
 !README.md
 !Makefile

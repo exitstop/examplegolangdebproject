@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-PROJECTNAME_LOG=examplegolangdebproject
+PROJECTNAME_LOG=logservice
 
 TAG=$(shell git describe --tags)
 COMMIT=$(shell git rev-parse --short HEAD)
@@ -8,8 +8,8 @@ BUILD_TIME=$(shell date -u '+%Y-%m-%d_%H:%M:%S')
 
 prefix = /usr/local
 
-.PHONY: build/examplegolangdebproject
-build/examplegolangdebproject:
+.PHONY: build/logservice
+build/logservice:
 	go build \
 		-ldflags="-X 'main.version=$(TAG)' -X 'main.commit=$(COMMIT)' -X 'main.buildTime=$(BUILD_TIME)'" \
 		-o build/${PROJECTNAME_LOG} cmd/log/main.go cmd/log/version.go
@@ -20,15 +20,15 @@ NICK_NAME_PROJECT ?= nickname
 
 .PHONY: change_name_project
 change_name_project:
-	./scripts/change_name_project.sh examplegolangdebproject $(NAME_PROJECT)
+	./scripts/change_name_project.sh logservice $(NAME_PROJECT)
 	./scripts/change_name_project.sh exitstop $(NICK_NAME_PROJECT)
-	mv configs/examplegolangdebproject.example.toml configs/$(NAME_PROJECT).example.toml
+	scripts/rename_file.sh logservice $(NAME_PROJECT)
 
 # DEBIAN GENERATE
 
 .PHONY: install
-install: build/examplegolangdebproject
-	install -D build/examplegolangdebproject $(DESTDIR)$(prefix)/yournickname/examplegolangdebproject/bin/examplegolangdebproject
+install: build/logservice
+	install -D build/logservice $(DESTDIR)$(prefix)/yournickname/logservice/bin/logservice
 	install -d $(DESTDIR)$(prefix)/../etc/yournickname/
 
 .PHONY: generate-changelog
@@ -44,15 +44,15 @@ build-debian:
 .PHONY: clean
 clean:
 	-rm -rf \
-		debian/examplegolangdebproject/ \
+		debian/logservice/ \
 		debian/.debhelper/ \
 		build/*
 	-rm -f \
 		debian/debhelper-build-stamp \
 		debian/files \
-		debian/examplegolangdebproject.debhelper.log \
-		debian/examplegolangdebproject.postrm.debhelper \
-		debian/examplegolangdebproject.substvars \
-		../examplegolangdebproject_*_*.deb \
-		../examplegolangdebproject_*_*.buildinfo \
-		../examplegolangdebproject_*_*.changes
+		debian/logservice.debhelper.log \
+		debian/logservice.postrm.debhelper \
+		debian/logservice.substvars \
+		../logservice_*_*.deb \
+		../logservice_*_*.buildinfo \
+		../logservice_*_*.changes

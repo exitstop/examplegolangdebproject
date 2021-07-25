@@ -1,3 +1,3 @@
-module github.com/exitstop/examplegolangdebproject
+module github.com/exitstop/logservice
 
 go 1.16

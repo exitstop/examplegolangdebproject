@@ -1,0 +1,17 @@
+[Unit]
+Description= customnameproject - Control your device
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=root
+Group=root
+ExecStart=/usr/nicknameproject/customnameproject/bin/customnameproject \
+                                             --ssl 0 \
+                                             --config-path /etc/nicknameproject/customnameproject/config.toml \
+                                             --logpath /var/log/nicknameproject/
+
+[Install]
+WantedBy=multi-user.target

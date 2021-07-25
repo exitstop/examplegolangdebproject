@@ -1,0 +1,9 @@
+/var/log/nicknameproject/*.log {
+    weekly
+    size 10M
+    rotate 5
+    compress
+    delaycompress
+    missingok
+    notifempty
+}

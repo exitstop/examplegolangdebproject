@@ -1,4 +1,4 @@
-examplegolangdebproject (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
+logservice (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
 
   [ bg ]
   * UNRELEASED

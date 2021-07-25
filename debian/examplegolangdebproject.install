@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+
+configs/customnameproject.example.toml => etc/nicknameproject/customnameproject/config.toml
