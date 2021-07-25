@@ -21,15 +21,15 @@ NICK_NAME_PROJECT ?= nickname
 .PHONY: change_name_project
 change_name_project:
 	./scripts/change_name_project.sh examplegolangdebproject $(NAME_PROJECT)
-	./scripts/change_name_project.sh exitsto $(NICK_NAME_PROJECT)
+	./scripts/change_name_project.sh exitstop $(NICK_NAME_PROJECT)
 	scripts/rename_file.sh examplegolangdebproject $(NAME_PROJECT)
 
 # DEBIAN GENERATE
 
 .PHONY: install
 install: build/examplegolangdebproject
-	install -D build/examplegolangdebproject $(DESTDIR)$(prefix)/yournickname/examplegolangdebproject/bin/examplegolangdebproject
-	install -d $(DESTDIR)$(prefix)/../etc/yournickname/
+	install -D build/examplegolangdebproject $(DESTDIR)$(prefix)/exitstop/examplegolangdebproject/bin/examplegolangdebproject
+	install -d $(DESTDIR)$(prefix)/../etc/exitstop/
 
 .PHONY: generate-changelog
 generate-changelog:
