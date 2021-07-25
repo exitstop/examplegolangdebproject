@@ -16,4 +16,3 @@ mv $CURRENT_NAME.service $NEW_NAME.service
 mv $CURRENT_NAME.substvars $NEW_NAME.substvars
 mv $CURRENT_NAME.postrm.debhelper $NEW_NAME.postrm.debhelper
 mv $CURRENT_NAME.substvars $NEW_NAME.substvars
-mv logservice.substvars $NEW_NAME.substvars
