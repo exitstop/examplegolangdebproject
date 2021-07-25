@@ -12,6 +12,5 @@ mv $CURRENT_NAME.logrotate $NEW_NAME.logrotate
 mv $CURRENT_NAME.$CURRENT_NAME.service $NEW_NAME.$NEW_NAME.service
 mv $CURRENT_NAME.post $NEW_NAME.post
 mv $CURRENT_NAME.service $NEW_NAME.service
-mv $CURRENT_NAME.substvars $NEW_NAME.substvars
 mv $CURRENT_NAME.postrm.debhelper $NEW_NAME.postrm.debhelper
 mv $CURRENT_NAME.substvars $NEW_NAME.substvars
