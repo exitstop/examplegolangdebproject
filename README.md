@@ -5,5 +5,5 @@
 # Как изменить ник проекта и имя проекта?
 
 ```
-make NAME_PROJECT=customnameproject NICK_NAME_PROJECT=nicknameproject
+make change_name_project NAME_PROJECT=customnameproject NICK_NAME_PROJECT=nicknameproject
 ```
