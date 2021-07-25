@@ -1,0 +1,128 @@
+# Сперва
+# Запрещаем вообще все
+*
+
+# find . -type d | cut -c 3- | sed 's/^/!*/' | grep -v ".git"
+# Затем
+# Разрешаем мониторить эти папки
+!*.github/
+!*.github/workflows
+!*debian
+!*debian/source
+!*internal
+!*internal/arg
+!*internal/server
+!*internal/config
+!*build
+!*cmd
+!*cmd/log
+!*configs
+!*scripts
+# Эту папку не нужно отслеживать
+#!*storage/
+#!*storage/photos/
+#!*storage/photos/default/
+
+#!storage/photos/default/avatar.png
+#!storage/photos/default/test.ini
+
+# И в этих папках брать только эти форматы
+!*.ini
+!.golangci.yml
+!.gitignore
+!.gitattributes
+!.gitmodules
+!go.mod
+!dhcpd.ap.conf
+!local-ap
+!test.py
+!*.sh
+!*.go
+!*.gohtml
+!*.js
+!*.css
+!*.png
+!*.mod
+!*.json
+!*.conf
+!*.toml
+!*.vue
+!*.js
+!*.scss
+!*.sql
+!*.pdf
+!*.py
+!*.yml
+!*.pem
+!*.ttf
+!*.woff
+!*.woff2
+!*.eot
+!*.html
+# Использутей для этих типв файлов git lfs
+#!*.png
+
+# Запрещаем конкретные файлы
+mix-manifest.json
+package-lock.json
+!go.sum
+
+# Запретили все что в папке
+#storage/photos/default/*
+configs/*
+# Кроме этого
+# Но хранить в гите картинки категорически нельзя,
+# нужно использовать git lfs
+# https://git-lfs.github.com/
+#!storage/photos/default/test.ini
+#!storage/photos/default/avatar.png
+#!configs/*.example.ini
+!configs/*.example.toml
+
+# Запрещаем папки
+public
+
+#temp_dist_pack/
+#configs/terminalgo.toml
+#external_googletest
+build
+node_modules
+storage
+public
+#./public/css/app.css
+#./public/js/app.js
+#./public/mix-manifest.json
+#./start
+#./start_arm
+#./start.exe
+#./start_terminal
+#start
+#!scripts/
+#./configs/terminalgo.toml
+#public/css/app.css
+#public/js/app.js
+
+!*src/network/
+!/src/pipeline/
+!/src/pipeline/calibration
+!/src/pipeline/controler
+!/src/pipeline/resources
+!/src/pipeline/settings
+!/src/display/
+
+!/debian/
+!/debian/changelog
+!/debian/control
+!/debian/panelgo.install
+!/debian/panelgo.panelgo.service
+!/debian/panelgo.dual_calib.service
+!/debian/panelgo.opayterminal.service
+!/debian/panelgo.logrotate
+!/debian/panelgo.post
+!/debian/rules
+!/debian/preinst
+!/debian/postinst
+!/debian/desc.json
+!/debian/source/
+!/debian/source/format
+!build.dockerfile

@@ -1,0 +1,5 @@
+{
+    "package_name": "examplegolangdebproject",
+    "version": "%VERSION%",
+    "foreground": true
+}
