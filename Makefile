@@ -22,6 +22,7 @@ NICK_NAME_PROJECT ?= nickname
 change_name_project:
 	./scripts/change_name_project.sh examplegolangdebproject $(NAME_PROJECT)
 	./scripts/change_name_project.sh exitstop $(NICK_NAME_PROJECT)
+	mv configs/examplegolangdebproject.example.toml configs/$(NAME_PROJECT).example.toml
 
 # DEBIAN GENERATE
 
