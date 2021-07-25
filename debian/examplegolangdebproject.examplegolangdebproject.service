@@ -1,5 +1,5 @@
 [Unit]
-Description=customnameproject nicknameproject - Control your device
+Description=examplegolangdebproject nicknameproject - Control your device
 After=network-online.target
 
 [Service]
@@ -8,7 +8,7 @@ Restart=always
 RestartSec=3
 User=root
 Group=root
-ExecStart=/usr/nicknameproject/customnameproject/bin/customnameproject \
+ExecStart=/usr/nicknameproject/examplegolangdebproject/bin/examplegolangdebproject \
                                              --logpath /var/log/nicknameproject/
 
 [Install]
