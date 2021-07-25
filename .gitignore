@@ -28,6 +28,7 @@
 
 # И в этих папках брать только эти форматы
 !*.ini
+!README.md
 !.golangci.yml
 !.gitignore
 !.gitattributes
