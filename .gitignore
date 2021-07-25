@@ -29,6 +29,7 @@
 # И в этих папках брать только эти форматы
 !*.ini
 !README.md
+!Makefile
 !.golangci.yml
 !.gitignore
 !.gitattributes
