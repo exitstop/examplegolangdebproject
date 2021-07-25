@@ -18,4 +18,4 @@ override_dh_shlibdeps:
 	true
 
 override_dh_installsystemd:
-	dh_installsystemd --name=logservice
+	dh_installsystemd --name=examplegolangdebproject

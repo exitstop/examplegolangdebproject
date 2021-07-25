@@ -1,4 +1,4 @@
-logservice (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
+examplegolangdebproject (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
 
   [ bg ]
   * UNRELEASED
@@ -6,4 +6,4 @@ logservice (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-messag
   * UNRELEASED
   * UNRELEASED
 
- -- Bogdan Kolos <exitstop@list.ru>  Mon, 26 Jul 2021 00:25:13 +0300
+ -- Bogdan Kolos <exitsto@list.ru>  Mon, 26 Jul 2021 00:25:13 +0300

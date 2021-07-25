@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/exitstop/logservice/internal/arg"
+	"github.com/exitsto/examplegolangdebproject/internal/arg"
 )
 
 var (
 	version   = "none"
 	commit    = "unset" // номер commit
 	buildTime = "unset" // дата и время сборки
-	appName   = "logservice"
+	appName   = "examplegolangdebproject"
 )
 
 func ShowVersion() {
