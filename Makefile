@@ -14,6 +14,13 @@ build/examplegolangdebproject:
 		-ldflags="-X 'main.version=$(TAG)' -X 'main.commit=$(COMMIT)' -X 'main.buildTime=$(BUILD_TIME)'" \
 		-o build/${PROJECTNAME_LOG} cmd/examplegolangdebproject/main.go cmd/examplegolangdebproject/version.go
 
+.PHONY: run/examplegolangdebproject
+run/examplegolangdebproject: build/examplegolangdebproject
+	./build/${PROJECTNAME_LOG}
+
+.PHONY: run/version
+run/version: build/examplegolangdebproject
+	./build/${PROJECTNAME_LOG} -v
 
 NAME_PROJECT ?= examplegolangdebproject
 NICK_NAME_PROJECT ?= exitstop
