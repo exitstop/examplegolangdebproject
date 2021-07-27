@@ -8,10 +8,10 @@ Restart=always
 RestartSec=3
 User=root
 Group=root
-ExecStart=/usr/nicknameproject/examplegolangdebproject/bin/examplegolangdebproject \
+ExecStart=/usr/nickexamplegolangdebproject/examplegolangdebproject/bin/examplegolangdebproject \
                                              --ssl 0 \
-                                             --config-path /etc/nicknameproject/examplegolangdebproject/config.toml \
-                                             --logpath /var/log/nicknameproject/
+                                             --config-path /etc/nickexamplegolangdebproject/examplegolangdebproject/config.toml \
+                                             --logpath /var/log/nickexamplegolangdebproject/
 
 [Install]
 WantedBy=multi-user.target

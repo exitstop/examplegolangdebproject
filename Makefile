@@ -15,8 +15,8 @@ build/examplegolangdebproject:
 		-o build/${PROJECTNAME_LOG} cmd/log/main.go cmd/log/version.go
 
 
-NAME_PROJECT ?= nameproject
-NICK_NAME_PROJECT ?= nickname
+NAME_PROJECT ?= examplegolangdebproject
+NICK_NAME_PROJECT ?= exitstop
 
 .PHONY: change_name_project
 change_name_project:

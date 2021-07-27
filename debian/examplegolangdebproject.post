@@ -1,15 +1,15 @@
 set -ex
 
 # echo 1
-chown -R orangepi:orangepi /etc/nicknameproject/
-chmod 664 /etc/nicknameproject/pipelinego/config.toml
+chown -R orangepi:orangepi /etc/nickexamplegolangdebproject/
+chmod 664 /etc/nickexamplegolangdebproject/pipelinego/config.toml
 
-FILE=/etc/nicknameproject/opayterminal/config.json
+FILE=/etc/nickexamplegolangdebproject/opayterminal/config.json
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else
     echo "$FILE does not exist."
-    mkdir /etc/nicknameproject/opayterminal/
+    mkdir /etc/nickexamplegolangdebproject/opayterminal/
     cp /usr/lib/opay-terminal/resources/app/config/default.json \
-        /etc/nicknameproject/opayterminal/config.json
+        /etc/nickexamplegolangdebproject/opayterminal/config.json
 fi
