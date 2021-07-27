@@ -10,7 +10,7 @@ func main() {
 		fmt.Printf("StartInit(): %v\n", err)
 		return
 	}
-	fmt.Println("examplegolangdebproject")
+	fmt.Println("examplegolangdebproject2")
 
 	fmt.Printf("\narg = %v", arg)
 }

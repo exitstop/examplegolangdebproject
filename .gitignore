@@ -9,6 +9,7 @@
 !*.github/workflows
 !*cmd
 !*cmd/examplegolangdebproject
+!*cmd/examplegolangdebproject2
 !*debian
 !*debian/source
 !*internal
