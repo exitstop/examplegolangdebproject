@@ -9,14 +9,12 @@ import (
 	"github.com/exitstop/examplegolangdebproject/internal/arg"
 )
 
-var (
-	version   = "none"
-	commit    = "unset" // номер commit
-	buildTime = "unset" // дата и время сборки
-	appName   = "remotessh"
-)
-
 func ShowVersion() {
+	app.AppInfo.Version = app.Version
+	app.AppInfo.Commit = app.Commit
+	app.AppInfo.BuildTime = app.BuildTime
+	app.AppInfo.AppName = app.AppName
+
 	infoJson, _ := json.Marshal(app.AppInfo)
 	fmt.Println(string(infoJson))
 	return
@@ -31,10 +29,6 @@ func Execute(a *arg.Argument) (err error) {
 }
 
 func StartInit() (arguments arg.Argument, err error) {
-	app.AppInfo.Version = version
-	app.AppInfo.Commit = commit
-	app.AppInfo.BuildTime = buildTime
-	app.AppInfo.AppName = appName
 
 	arguments = arg.Init()
 	Execute(&arguments)

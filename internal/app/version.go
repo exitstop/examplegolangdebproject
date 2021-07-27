@@ -8,5 +8,12 @@ type AppInfoStruct struct {
 }
 
 var (
+	Version   = "none"
+	Commit    = "unset" // номер commit
+	BuildTime = "unset" // дата и время сборки
+	AppName   = "examplegolangdebproject"
+)
+
+var (
 	AppInfo AppInfoStruct
 )
