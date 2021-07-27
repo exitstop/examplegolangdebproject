@@ -6,6 +6,7 @@ NEW_NAME=$2
 set -ex
 
 mv configs/$CURRENT_NAME.example.toml configs/$NEW_NAME.example.toml
+mv cmd/$CURRENT_NAME cmd/$NEW_NAME
 cd debian
 mv $CURRENT_NAME.install $NEW_NAME.install
 mv $CURRENT_NAME.logrotate $NEW_NAME.logrotate

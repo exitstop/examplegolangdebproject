@@ -10,9 +10,9 @@ prefix = /usr/local
 
 .PHONY: build/examplegolangdebproject
 build/examplegolangdebproject:
-	go build \
+	GOOS=$(OS) GOARCH=$(ARCH) go build \
 		-ldflags="-X 'main.version=$(TAG)' -X 'main.commit=$(COMMIT)' -X 'main.buildTime=$(BUILD_TIME)'" \
-		-o build/${PROJECTNAME_LOG} cmd/log/main.go cmd/log/version.go
+		-o build/${PROJECTNAME_LOG} cmd/examplegolangdebproject/main.go cmd/examplegolangdebproject/version.go
 
 
 NAME_PROJECT ?= examplegolangdebproject
