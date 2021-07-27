@@ -10,6 +10,7 @@
 !*debian
 !*debian/source
 !*internal
+!*internal/app
 !*internal/arg
 !*internal/server
 !*internal/config
