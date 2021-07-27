@@ -15,6 +15,7 @@ a=$CURRENT_NAME;b=$NAME&& grep -l "$a" `find  -type f \( -name "*.toml" \
     -o -name "desc.json" \
     -o -name "preinst" \
     -o -name "*.post" \
+    -o -name "*.debhelper" \
     -o -name "*.install" \
     -o -name "Makefile" \
     -o -name "*.service" \
