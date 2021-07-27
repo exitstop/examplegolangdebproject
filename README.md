@@ -14,3 +14,13 @@ make change_name_project NAME_PROJECT=customnameproject NICK_NAME_PROJECT=nickna
 ```
 make build-debian-all-platform
 ```
+
+# Осторожно .gitignore настрое очень жестко
+
+- .gitignore игнорирует все что не указано внем
+- Если нужно разрешить много папок используйте команду из корня поректа:
+
+```
+find . -type d | cut -c 3- | sed 's/^/!*/' | grep -v ".git"
+```
+- Не забудьте удалить папки которые не нужны в вашем репозитори например build или package
