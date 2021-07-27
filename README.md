@@ -16,6 +16,18 @@ make build-debian-all-platform
 ```
 - В папке package будут deb пакеты
 
+### Скомпилировать проект с examplegolangdebproject2
+
+```
+make build-debian NAME_PROJECT=examplegolangdebproject2
+```
+
+### Просто запустить чтобы вывел версию
+
+```
+make run/version NAME_PROJECT=examplegolangdebproject2
+```
+
 ### Осторожно .gitignore настроен очень жестко
 
 - .gitignore игнорирует все что не указано в нем
