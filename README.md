@@ -8,3 +8,9 @@
 ```
 make change_name_project NAME_PROJECT=customnameproject NICK_NAME_PROJECT=nicknameproject
 ```
+
+# Как скомпилировать для разных платформ?
+
+```
+make build-debian-all-platform
+```
