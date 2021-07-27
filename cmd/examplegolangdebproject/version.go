@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/FaceChainTeam/remotessh/internal/app"
-	"github.com/FaceChainTeam/remotessh/internal/arg"
 	"github.com/denisbrodbeck/machineid"
+	"github.com/examplegolangdebproject/remotessh/internal/app"
+	"github.com/examplegolangdebproject/remotessh/internal/arg"
 )
 
 var (
