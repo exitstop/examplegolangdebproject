@@ -7,6 +7,7 @@ a=$CURRENT_NAME;b=$NAME&& grep -l "$a" `find  -type f \( -name "*.toml" \
     -o -name "*.go" \
     -o -name "*.mod" \
     -o -name "*.sh" \
+    -o -name ".gitignore" \
     -o -name "rules" \
     -o -name "postinst" \
     -o -name "control" \
