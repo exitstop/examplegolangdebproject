@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/exitsto/examplegolangdebproject/internal/arg"
+	"github.com/exitstop/examplegolangdebproject/internal/arg"
 )
 
 var (
