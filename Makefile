@@ -5,22 +5,28 @@ PROJECTNAME_LOG=examplegolangdebproject
 TAG=$(shell git describe --tags)
 COMMIT=$(shell git rev-parse --short HEAD)
 BUILD_TIME=$(shell date -u '+%Y-%m-%d_%H:%M:%S')
+PRODUCT=examplegolangdebproject
 
 prefix = /usr/local
 
 .PHONY: build/examplegolangdebproject
 build/examplegolangdebproject:
-	GOOS=$(OS) GOARCH=$(ARCH) go build \
-		-ldflags="-X 'main.version=$(TAG)' -X 'main.commit=$(COMMIT)' -X 'main.buildTime=$(BUILD_TIME)'" \
-		-o build/${PROJECTNAME_LOG} cmd/examplegolangdebproject/main.go cmd/examplegolangdebproject/version.go
+	./scripts/build.sh \
+		-so $(OS) \
+		-arch $(ARCH) \
+		-tag $(TAG) \
+		-commit $(COMMIT) \
+		-projectname_log $(PROJECTNAME_LOG) \
+		-build_time $(BUILD_TIME) \
+		-product $(PRODUCT)
 
 .PHONY: run/examplegolangdebproject
 run/examplegolangdebproject: build/examplegolangdebproject
-	./build/${PROJECTNAME_LOG}
+	./build/$(PROJECTNAME_LOG)
 
 .PHONY: run/version
 run/version: build/examplegolangdebproject
-	./build/${PROJECTNAME_LOG} -v
+	./build/$(PROJECTNAME_LOG) -v
 
 NAME_PROJECT ?= examplegolangdebproject
 NICK_NAME_PROJECT ?= exitstop
@@ -54,13 +60,13 @@ build-debian-all-platform:
 	install -d package/darwin
 	rm package/linux/*||echo 0
 	rm package/darwin/*||echo 0
-	make build-debian ARCH=arm64 OS=linux
+	make build-debian ARCH=arm64 OS=linux TAG=$(TAG) COMMIT=$(COMMIT) PROJECTNAME_LOG=$(PROJECTNAME_LOG) BUILD_TIME=$(BULD_TIME) PRODUCT=$(PRODUCT)
 	cp ../${PROJECTNAME_LOG}*.deb package/linux
-	make build-debian ARCH=amd64 OS=linux
+	make build-debian ARCH=amd64 OS=linux TAG=$(TAG) COMMIT=$(COMMIT) PROJECTNAME_LOG=$(PROJECTNAME_LOG) BUILD_TIME=$(BULD_TIME) PRODUCT=$(PRODUCT)
 	cp ../${PROJECTNAME_LOG}*.deb package/linux
-	make build-debian ARCH=amd64 OS=darwin
+	make build-debian ARCH=amd64 OS=darwin TAG=$(TAG) COMMIT=$(COMMIT) PROJECTNAME_LOG=$(PROJECTNAME_LOG) BUILD_TIME=$(BULD_TIME) PRODUCT=$(PRODUCT)
 	cp ../${PROJECTNAME_LOG}*.deb package/darwin
-	make build-debian ARCH=arm64 OS=darwin
+	make build-debian ARCH=arm64 OS=darwin TAG=$(TAG) COMMIT=$(COMMIT) PROJECTNAME_LOG=$(PROJECTNAME_LOG) BUILD_TIME=$(BULD_TIME) PRODUCT=$(PRODUCT)
 	cp ../${PROJECTNAME_LOG}*.deb package/darwin
 
 .PHONY: clean

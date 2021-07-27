@@ -5,9 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/denisbrodbeck/machineid"
-	"github.com/examplegolangdebproject/remotessh/internal/app"
-	"github.com/examplegolangdebproject/remotessh/internal/arg"
+	"github.com/exitstop/examplegolangdebproject/internal/app"
+	"github.com/exitstop/examplegolangdebproject/internal/arg"
 )
 
 var (
@@ -26,11 +25,6 @@ func ShowVersion() {
 func Execute(a *arg.Argument) (err error) {
 	if *a.V {
 		ShowVersion()
-		os.Exit(0)
-	}
-	if *a.ID {
-		uniq, _ := machineid.ID()
-		fmt.Printf("%s", uniq)
 		os.Exit(0)
 	}
 	return
