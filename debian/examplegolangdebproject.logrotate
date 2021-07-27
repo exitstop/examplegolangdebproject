@@ -1,4 +1,4 @@
-/var/log/nickexamplegolangdebproject/*.log {
+/var/log/exitstop/*.log {
     weekly
     size 10M
     rotate 5

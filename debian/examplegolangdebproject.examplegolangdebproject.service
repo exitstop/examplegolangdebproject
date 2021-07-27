@@ -1,5 +1,5 @@
 [Unit]
-Description=examplegolangdebproject nickexamplegolangdebproject - Control your device
+Description=examplegolangdebproject exitstop - Control your device
 After=network-online.target
 
 [Service]
@@ -8,8 +8,8 @@ Restart=always
 RestartSec=3
 User=root
 Group=root
-ExecStart=/usr/nickexamplegolangdebproject/examplegolangdebproject/bin/examplegolangdebproject \
-                                             --logpath /var/log/nickexamplegolangdebproject/
+ExecStart=/usr/exitstop/examplegolangdebproject/bin/examplegolangdebproject \
+                                             --logpath /var/log/exitstop/
 
 [Install]
 WantedBy=multi-user.target

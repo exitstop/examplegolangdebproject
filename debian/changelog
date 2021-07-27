@@ -1,6 +1,12 @@
-examplegolangdebproject (0.0.1) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
+examplegolangdebproject (0.0.2-6-g86d9257) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
 
   [ bg ]
   * UNRELEASED
 
- -- Bogdan Kolos <none@gmail.com>  Mon, 26 Jul 2021 00:25:13 +0300
+  [ Kolos Bogdan ]
+  * variable rename
+  * save state
+  * wp: refactoring
+  * add folder
+
+ -- Kolos Bogdan <exitstop@list.ru>  Tue, 27 Jul 2021 18:43:47 +0300

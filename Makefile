@@ -48,6 +48,21 @@ build-debian:
 		-us -uc --build=binary \
 		--host-arch $(ARCH)
 
+.PHONY: build-debian-all-platform
+build-debian-all-platform:
+	install -d package/linux
+	install -d package/darwin
+	rm package/linux/*||echo 0
+	rm package/darwin/*||echo 0
+	make build-debian ARCH=arm64 OS=linux
+	cp ../${PROJECTNAME_LOG}*.deb package/linux
+	make build-debian ARCH=amd64 OS=linux
+	cp ../${PROJECTNAME_LOG}*.deb package/linux
+	make build-debian ARCH=amd64 OS=darwin
+	cp ../${PROJECTNAME_LOG}*.deb package/darwin
+	make build-debian ARCH=arm64 OS=darwin
+	cp ../${PROJECTNAME_LOG}*.deb package/darwin
+
 .PHONY: clean
 clean:
 	-rm -rf \
