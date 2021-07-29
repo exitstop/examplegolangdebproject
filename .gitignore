@@ -7,20 +7,20 @@
 # Разрешаем мониторить эти папки
 !*.github/
 !*.github/workflows
-!*cmd
-!*cmd/examplegolangdebproject
-!*cmd/examplegolangdebproject2
 !*debian
 !*debian/source
 !*internal
-!*internal/app
 !*internal/arg
 !*internal/server
+!*internal/app
+!*internal/logger
 !*internal/config
-!*build
-!*cmd
-!*cmd/log
 !*configs
+!*cmd
+!*cmd/examplegolangdebproject
+!*cmd/examplegolangdebproject/examplegolangdebproject
+!*cmd/examplegolangdebproject2
+!*cmd/examplegolangdebproject2/examplegolangdebproject
 !*scripts
 # Эту папку не нужно отслеживать
 #!*storage/
@@ -77,7 +77,7 @@
 # Запрещаем конкретные файлы
 mix-manifest.json
 package-lock.json
-!go.sum
+go.sum
 
 # Запретили все что в папке
 #storage/photos/default/*
