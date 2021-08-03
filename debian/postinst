@@ -2,6 +2,18 @@
 
 #set -e
 
-useradd -r -s /bin/false examplegolangdebproject
+create_terminal_user() {
+    if ! getent passwd examplegolangdebproject > /dev/null; then
+        adduser \
+            --quiet \
+            --system \
+            --group \
+            --no-create-home \
+            --home /run/examplegolangdebproject \
+            examplegolangdebproject 
+    fi
+}
+
+create_terminal_user
 
 #DEBHELPER#
