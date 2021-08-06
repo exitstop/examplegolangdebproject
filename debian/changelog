@@ -1,4 +1,4 @@
-examplegolangdebproject (0.0.2-22-gef3fedb) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
+examplegolangdebproject (0.0.2-30-g32d4ed2) UNRELEASED; urgency=medium  * [[[insert-git-dch-commit-message-here]]]
 
   [ bg ]
   * UNRELEASED
@@ -24,5 +24,23 @@ examplegolangdebproject (0.0.2-22-gef3fedb) UNRELEASED; urgency=medium  * [[[ins
   * README
   * add .gitignore in script rename
   * customnameproject => examplegolangdebproject
+  * examplegolangdebproject2
+  * README
+  * .gitignore
+  * add logger
 
- -- Bogdan Kolos <exitstop@list.ru>  Tue, 27 Jul 2021 23:41:47 +0300
+  [ Kolos Bogdan ]
+  * add uptime
+  * create user
+
+  [ Bogdan Kolos ]
+  * examplegolangdebproject2
+  * README
+  * .gitignore
+  * add logger
+
+  [ Kolos Bogdan ]
+  * add uptime
+  * create user
+
+ -- Bogdan Kolos <exitstop@list.ru>  Sat, 07 Aug 2021 00:36:28 +0300
