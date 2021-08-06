@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/exitstop/examplegolangdebproject/internal/app"
 	"github.com/exitstop/examplegolangdebproject/internal/arg"
@@ -21,6 +22,7 @@ func ShowVersion() {
 }
 
 func Execute(a *arg.Argument) (err error) {
+	app.Uptime = time.Now()
 	if *a.V {
 		ShowVersion()
 		os.Exit(0)
@@ -29,7 +31,6 @@ func Execute(a *arg.Argument) (err error) {
 }
 
 func StartInit() (arguments arg.Argument, err error) {
-
 	arguments = arg.Init()
 	Execute(&arguments)
 	return
