@@ -19,7 +19,9 @@ build/examplegolangdebproject:
 		-d $(COMMIT) \
 		-e $(NAME_PROJECT) \
 		-f $(BUILD_TIME) \
-		-g $(NAME_PROJECT)
+		-g $(NAME_PROJECT) \
+		-k cmd/$(NAME_PROJECT)/main.go \
+		-k cmd/$(NAME_PROJECT)/version.go
 
 .PHONY: run/examplegolangdebproject
 run/examplegolangdebproject: build/examplegolangdebproject
