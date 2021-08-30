@@ -20,4 +20,4 @@ a=$CURRENT_NAME;b=$NAME&& grep -l "$a" `find  -type f \( -name "*.toml" \
     -o -name "Makefile" \
     -o -name "*.service" \
     -o -name "*.logrotate" \
-    \)` | xargs sed -i "s/$a/$b/g"
+    \)` | xargs sed -i "s%$a%$b%g"
